@@ -6,8 +6,8 @@ on:
     branches:
       - master
       
-  schedule:
-  - cron: "1 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+    schedule:
+    - cron: "* * * * *" # Runs every minute
 
 jobs:
   auto_commit:
