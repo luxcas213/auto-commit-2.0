@@ -15,7 +15,10 @@ def commit():
 
     subprocess.run(["git", "config", "--global", "user.name", "Tu Nombre"])
     subprocess.run(["git", "config", "--global", "user.email", "tuemail@example.com"])
-
+    
+    subprocess.run(["git", "pull"])
+    subprocess.run(["git", "add", "."])
+    
     today = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     subprocess.run(["git", "commit", "--allow-empty", "-m", "commit :)", "--date", today])
 
